@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="sample.TestActivity"
+    tools:showIn="@layout/activity_test">
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/store_house_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        cube_ptr:ptr_duration_to_close="30000"
+        cube_ptr:ptr_duration_to_close_header="2000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <!-- banner -->
+                <com.youth.banner.Banner
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"/>
+
+
+                <Button
+                    android:id="@+id/btn_alipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="支付宝支付" />
+
+                <Button
+                    android:id="@+id/btn_PhotoDraweeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="PhotoDraweeView" />
+
+                <Button
+                    android:id="@+id/btn_amap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="高德地图" />
+
+                <me.relex.photodraweeview.PhotoDraweeView
+                    android:id="@+id/sdv_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="5dp"
+                    app:placeholderImage="@drawable/loading"
+                    app:actualImageScaleType="centerCrop"
+                    app:roundBottomLeft="true"
+                    app:roundBottomRight="true"
+                    app:roundedCornerRadius="10dp"/>
+
+                <Button
+                    android:id="@+id/tv_toast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="自定义Toast显示" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_button"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp" />
+
+                <fr.castorflex.android.circularprogressbar.CircularProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:indeterminate="true"
+                    app:cpb_color="#FFee44"
+                    app:cpb_colors="@array/gplus_colors"
+                    app:cpb_max_sweep_angle="300"
+                    app:cpb_min_sweep_angle="10"
+                    app:cpb_rotation_speed="1.0"
+                    app:cpb_stroke_width="4dp"
+                    app:cpb_sweep_speed="1.0" />
+
+
+                <fr.castorflex.android.smoothprogressbar.SmoothProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    app:spb_color="#FF0000"
+                    app:spb_mirror_mode="false"
+                    app:spb_progressiveStart_activated="true"
+                    app:spb_progressiveStart_speed="1.5"
+                    app:spb_progressiveStop_speed="3.4"
+                    app:spb_reversed="false"
+                    app:spb_sections_count="4"
+                    app:spb_speed="2.0"
+                    app:spb_stroke_separator_length="4dp"
+                    app:spb_stroke_width="4dp" />
+
+                <Button
+                    android:id="@+id/btn_tbs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="腾讯X5浏览服务" />
+
+
+                <Button
+                    android:id="@+id/btn_multiImageSelector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="MultiImageSelectorActivity" />
+
+                <Button
+                    android:id="@+id/btn_zxing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="ZxingCaptureActivity" />
+
+
+                <com.dd.processbutton.iml.ActionProcessButton
+                    android:id="@+id/btnSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Sign_in"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:pb_colorComplete="@color/green_complete"
+                    app:pb_colorError="@color/red_error"
+                    app:pb_colorNormal="@color/blue_normal"
+                    app:pb_colorPressed="@color/blue_pressed"
+                    app:pb_colorProgress="@color/purple_progress"
+                    app:pb_textComplete="Success"
+                    app:pb_textError="Error"
+                    app:pb_textProgress="Loading and material-dialogs" />
+
+                <Button
+                    android:id="@+id/btn_dao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="greenDao" />
+
+
+                <com.daimajia.numberprogressbar.NumberProgressBar
+                    android:id="@+id/NumberProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" />
+
+
+                <Button
+                    android:id="@+id/btn_SwipeMenuListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="SwipeMenuListView " />
+
+                <Button
+                    android:id="@+id/btn_signature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="手写签名 " />
+
+
+                <Button
+                    android:id="@+id/btn_okgopost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="okgo post请求数据" />
+
+                <Button
+                    android:id="@+id/btn_okgoget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="okgo get请求数据" />
+
+                <Button
+                    android:id="@+id/btn_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="TAB框架示例" />
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+</RelativeLayout>

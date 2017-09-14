@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.frame.sideslip_sample"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //极光推送集成部分
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "56065771f2dea1a30d2c1f8b", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+
+    //用来清除无用资源的插件
+    maven { url "https://jitpack.io" }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:design:25.1.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.lzy.net:okgo:+'
+    //版本号使用 + 可以自动引用最新版
+    compile 'com.lzy.net:okrx:+'
+    //版本号使用 + 可以自动引用最新版
+    compile 'com.lzy.net:okserver:+'
+    //版本号使用 + 可以自动引用最新版
+    compile 'com.google.code.gson:gson:+'
+    compile 'com.facebook.fresco:fresco:+'
+    compile 'com.github.castorflex.smoothprogressbar:library:+'
+    compile 'com.github.castorflex.smoothprogressbar:library-circular:+'
+    compile 'com.github.zcweng:switch-button:0.0.2@aar'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //极光推送集成部分
+    compile 'cn.jiguang.sdk:jpush:3.0.0'
+    // 此处以JPush 3.0.0 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.0.0'
+    // 此处以JCore 1.0.0 版本为例。
+    compile files('libs/tbs_sdk_thirdapp_v3.0.0.1038_43000_sharewithdownload_obfs_20170110_144724.jar')
+    //MultiImageSelector
+    compile 'com.github.lovetuzitong:MultiImageSelector:+'
+    compile 'com.squareup.picasso:picasso:+'
+    compile files('libs/zxing_core-3.3.0.jar')
+}

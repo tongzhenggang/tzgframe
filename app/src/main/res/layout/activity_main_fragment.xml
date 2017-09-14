@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/main_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/main_tab1_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/maintv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/itab_a" />
+
+            <TextView
+                android:id="@+id/main_tab1_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/main_tab1_text"
+                android:textSize="@dimen/main_tab_textsize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_tab2_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/maintv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/itab_b" />
+
+            <TextView
+                android:id="@+id/main_tab2_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/main_tab2_text"
+                android:textSize="@dimen/main_tab_textsize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_tab3_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/maintv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/itab_c" />
+
+            <TextView
+                android:id="@+id/main_tab3_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/main_tab3_text"
+                android:textSize="@dimen/main_tab_textsize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_tab4_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/maintv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/itab_d" />
+
+            <TextView
+                android:id="@+id/main_tab4_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/main_tab4_text"
+                android:textSize="@dimen/main_tab_textsize" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
