@@ -23,6 +23,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import config.Urls;
+import tool.AppUpdateManager;
 
 /**
  * description: TAB 框架
@@ -67,11 +69,22 @@ public class MainFragmentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_fragment);
         ButterKnife.bind(this);
 
+        Init();
+
+
+    }
+
+    private void Init() {
         fragmentManager = getSupportFragmentManager();
         initFragment();
         initTab();
         showFragment(0);
         initTabColor(0);
+
+        /**
+         * 自动检测版本升级
+         */
+        new AppUpdateManager(this, Urls.AppUpdata, false);
     }
 
     /**
