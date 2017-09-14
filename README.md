@@ -9,7 +9,7 @@ E-mail:tongzhenggang@126.com
 框架封装了以下内容（Contents）
 ```
 
->1、OKGO配置	
+> 1、OKGO配置	
 2、Fresco配置	
 3、Logger日志框架	
 4、Butterknife注解配置	
